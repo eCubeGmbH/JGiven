@@ -1,0 +1,20 @@
+= JGiven Report
+:toc: left
+:toclevels: 3
+:icons: font
+
+== All Scenarios
+
+include::allFeatures.asciidoc[]
+
+== Failing Scenarios
+
+include::failingScenarios.asciidoc[leveloffset=-1]
+
+== Pending Scenarios
+
+include::pendingScenarios.asciidoc[leveloffset=-1]
+
+== Tags
+
+include::tags.asciidoc[]

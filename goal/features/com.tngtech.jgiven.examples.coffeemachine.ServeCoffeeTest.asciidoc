@@ -1,0 +1,360 @@
+=== Serve Coffee
+
+icon:check-square[role=green] 11 Successful, icon:exclamation-circle[role=red] 4 Failed, icon:ban[role=grey] 0 Pending, 15 Total (1s 161ms)
+
+++++
+In order to refresh myself</br>as a customer</br>I want coffee to be served
+++++
+
+
+// tag::scenario-failed[]
+// tag::tag-FailingOnPurpose[]
+
+==== A failing scenario for demonstration purposes
+
+icon:exclamation-circle[role=red] (0s 3ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine [.right]#icon:check-square[role=green] (0s 0ms)# +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are no more coffees left [.right]#icon:check-square[role=green] (0s 0ms)#
+* [.introWord]*When* I press the coffee button [.right]#icon:check-square[role=green] (0s 0ms)#
+* [.introWord]*Then* I should be served a coffee [.right]#icon:exclamation-circle[role=red] (0s 0ms)#
+* [.introWord]*and* steps following a failed step should be skipped [.right]#icon:ban[role=grey] (0s 0ms)# +
+_This step is still visible in the report, but was actually not executed. It is marked as skipped in the report._
+// end::tag-FailingOnPurpose[]
+// end::scenario-failed[]
+
+// tag::scenario-failed[]
+
+==== A failing scenario for demonstration purposes
+// end::scenario-failed[]
+
+// tag::scenario-failed[]
+// tag::tag-FailingOnPurpose[]
+
+==== A scenario with a failing test case for demonstration purposes
+
+icon:exclamation-circle[role=red] (0s 10ms)
+
+Tags: _FailingOnPurpose_
+
+
+===== Case 1
+
+====
+withCoffees = true
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]_pass:[2]_ coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I insert [.stepArgument]_pass:[2]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* I should be served a coffee 
+
+===== Case 2
+
+====
+withCoffees = false
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine [.right]#icon:check-square[role=green] (0s 0ms)# +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*When* I insert [.stepArgument]_pass:[2]_ one euro coins [.right]#icon:check-square[role=green] (0s 0ms)#
+* [.introWord]*and* I press the coffee button [.right]#icon:check-square[role=green] (0s 0ms)#
+* [.introWord]*Then* I should be served a coffee [.right]#icon:exclamation-circle[role=red] (0s 4ms)#
+// end::tag-FailingOnPurpose[]
+// end::scenario-failed[]
+
+// tag::scenario-success[]
+
+==== A turned off coffee machine cannot serve coffee
+
+icon:check-square[role=green] (0s 4ms)
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* the machine is turned off 
+* [.introWord]*When* I press the coffee button 
+* [.introWord]*Then* no coffee should be served
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== An empty coffee machine cannot serve any coffee
+
+icon:check-square[role=green] (0s 3ms)
+
+Tags: _Order_
+
+[unstyled.steps]
+* [.introWord]*Given* an empty coffee machine 
+* [.introWord]*When* I insert [.stepArgument]_pass:[5]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* an error should be shown 
+* [.introWord]*and* no coffee should be served
+// end::scenario-success[]
+
+// tag::scenario-success[]
+// tag::tag-TagsWithCustomStyle[]
+
+==== Buy a coffee
+
+icon:check-square[role=green] (0s 22ms)
+
+Tags: _TagsWithCustomStyle_
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]*<coffees>* coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*and* the machine is [.stepArgument]*<onOrOff>* 
+* [.introWord]*and* the coffee costs [.stepArgument]_pass:[2]_ euros 
+* [.introWord]*When* I insert [.stepArgument]*<dollars>* one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* I [.stepArgument]*<shouldOrShouldNot>* be served a coffee 
+
+.Cases
+[options="header"]
+|===
+| #  | coffees | onOrOff | dollars | shouldOrShouldNot | Status
+| 1 | pass:[1] | pass:[on] | pass:[1] | pass:[should not] | icon:check-square[role=green]
+| 2 | pass:[1] | pass:[on] | pass:[2] | pass:[should] | icon:check-square[role=green]
+| 3 | pass:[0] | pass:[on] | pass:[2] | pass:[should not] | icon:check-square[role=green]
+| 4 | pass:[1] | pass:[off] | pass:[2] | pass:[should not] | icon:check-square[role=green]
+|===
+// end::tag-TagsWithCustomStyle[]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Coffee making gets better
+
+icon:check-square[role=green] (0s 6ms)
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*When* I make coffee for the [.stepArgument]*<runNr>* time 
+* [.introWord]*Then* the result is [.stepArgument]*<result>* 
+
+.Cases
+[options="header"]
+|===
+| #  | Description | runNr | result | Status
+| 1 | pass:[On the first run] | pass:[1] | pass:[quite ok] | icon:check-square[role=green]
+| 2 | pass:[And on the second run] | pass:[2] | pass:[well-done] | icon:check-square[role=green]
+|===
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Coffee is not served
+
+icon:check-square[role=green] (0s 15ms)
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* the coffee costs [.stepArgument]_pass:[2]_ euros 
+* [.introWord]*and* there are [.stepArgument]*<coffees>* coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I insert [.stepArgument]*<euros>* one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* I should not be served a coffee 
+
+.Cases
+[options="header"]
+|===
+| #  | coffees | euros | Status
+| 1 | pass:[1] | pass:[1] | icon:check-square[role=green]
+| 2 | pass:[0] | pass:[2] | icon:check-square[role=green]
+| 3 | pass:[1] | pass:[0] | icon:check-square[role=green]
+|===
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Correct messages are shown
+
+icon:check-square[role=green] (0s 31ms)
+
+Tags: _Data Tables_
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]*<coffees left>* coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I insert [.stepArgument]*<number of coins>* one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* the message [.stepArgument]*<message>* is shown 
+
+.Cases
+[options="header"]
+|===
+| #  | coffees left | number of coins | message | Status
+| 1 | pass:[0] | pass:[0] | pass:[Error: No coffees left] | icon:check-square[role=green]
+| 2 | pass:[0] | pass:[1] | pass:[Error: No coffees left] | icon:check-square[role=green]
+| 3 | pass:[1] | pass:[0] | pass:[Error: Insufficient money] | icon:check-square[role=green]
+| 4 | pass:[0] | pass:[5] | pass:[Error: No coffees left] | icon:check-square[role=green]
+| 5 | pass:[1] | pass:[5] | pass:[Enjoy your coffee!] | icon:check-square[role=green]
+|===
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Intro words are not required
+
+icon:check-square[role=green] (0s 2ms)
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* the coffee costs [.stepArgument]_pass:[5]_ euros 
+* there are [.stepArgument]_pass:[3]_ coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I press the coffee button 
+* [.introWord]*Then* an error should be shown 
+* no coffee should be served
+// end::scenario-success[]
+
+// tag::scenario-failed[]
+// tag::tag-FailingOnPurpose[]
+
+==== Long error messages should wrapped
+
+icon:exclamation-circle[role=red] (0s 1ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.steps]
+* [.introWord]*Given* an exception with a very long message [.right]#icon:exclamation-circle[role=red] (0s 0ms)#
+// end::tag-FailingOnPurpose[]
+// end::scenario-failed[]
+
+// tag::scenario-success[]
+
+==== No coffee left error is shown when there is no coffee left
+
+icon:check-square[role=green] (0s 8ms)
+
+Tags: _Order_
+
+[unstyled.steps]
+* [.introWord]*Given* an empty coffee machine 
+* [.introWord]*When* I insert [.stepArgument]_pass:[5]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* the message [.stepArgument]_pass:[Error: No coffees left]_ is shown
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Not enough money message is shown when insufficient money was given
+
+icon:check-square[role=green] (0s 1ms)
+
+Tags: _Order_
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]_pass:[2]_ coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I insert [.stepArgument]_pass:[1]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* the message [.stepArgument]_pass:[Error: Insufficient money]_ is shown
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Serving a coffee reduces the number of available coffees by one
+
+icon:check-square[role=green] (0s 21ms)
+
+Tags: _Data Tables_
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]*<initial coffees>* coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*When* I insert [.stepArgument]_pass:[2]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* a coffee should be served 
+* [.introWord]*and* there are [.stepArgument]*<coffees left>* coffees left in the machine [.stepArgument]*<coffees left>* 
+
+.Cases
+[options="header"]
+|===
+| #  | initial coffees | coffees left | Status
+| 1 | pass:[1] | pass:[0] | icon:check-square[role=green]
+| 2 | pass:[3] | pass:[2] | icon:check-square[role=green]
+| 3 | pass:[10] | pass:[9] | icon:check-square[role=green]
+|===
+// end::scenario-success[]
+
+// tag::scenario-failed[]
+// tag::tag-FailingOnPurpose[]
+
+==== Should fail with unexpected runtime exception
+
+icon:exclamation-circle[role=red] (1s 4ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.steps]
+* [.introWord]*Then* [.stepArgument]_pass:[should throw a runtime exception]_ [.right]#icon:exclamation-circle[role=red] (0s 999ms)#
+// end::tag-FailingOnPurpose[]
+// end::scenario-failed[]
+
+// tag::scenario-success[]
+
+==== Turned off machines should not serve coffee
+
+icon:check-square[role=green] (0s 22ms)
+
+Tags: _Case Diffs_
+
+
+===== Case 1:
+
+====
+onOrOff = true
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]_pass:[2]_ coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*and* the machine is [.stepArgument]_pass:[on]_ 
+* [.introWord]*When* I insert [.stepArgument]_pass:[2]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* I should be served a coffee 
+
+===== Case 2:
+
+====
+onOrOff = false
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a coffee machine  +
+_An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR._
+* [.introWord]*and* there are [.stepArgument]_pass:[2]_ coffees left in the machine  +
+_The number of coffees in the machine is set to the given value._
+* [.introWord]*and* the machine is [.stepArgument]_pass:[off]_ 
+* [.introWord]*When* I insert [.stepArgument]_pass:[2]_ one euro coins 
+* [.introWord]*and* I press the coffee button 
+* [.introWord]*Then* I should not be served a coffee 
+* [.introWord]*and* no error is shown
+// end::scenario-success[]

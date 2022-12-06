@@ -1,0 +1,102 @@
+=== Attachments Example
+
+icon:check-square[role=green] 7 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=grey] 0 Pending, 7 Total (0s 849ms)
+
+// tag::scenario-success[]
+
+==== Attachments can be added to steps
+
+icon:check-square[role=green] (0s 8ms)
+
+[unstyled.steps]
+* [.introWord]*Given* some text content [.stepArgument]_pass:["Hello World"]_ 
+* [.introWord]*Then* it can be added as an attachment to the step with title [.stepArgument]_pass:[Hi]_  link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment.plain[icon:file[],title=Hi]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Attachments can be directly shown
+
+icon:check-square[role=green] (0s 81ms)
+
+[unstyled.steps]
+* [.introWord]*Given* an oval circle image:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/oval-circle.png[An oval drawn in Java]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Attachments work with data tables
+
+icon:check-square[role=green] (0s 58ms)
+
+[unstyled.steps]
+* [.introWord]*Given* some text content [.stepArgument]*<content>* 
+* [.introWord]*Then* it can be added as an attachment to the step with title [.stepArgument]*<title>*  link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment2.plain[icon:file[],title=English], link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment3.plain[icon:file[],title=German], link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment4.plain[icon:file[],title=Chinese]
+
+.Cases
+[options="header"]
+|===
+| #  | content | title | Status
+| 1 | pass:["Hello World"] | pass:[English] | icon:check-square[role=green]
+| 2 | pass:["Hallo Welt"] | pass:[German] | icon:check-square[role=green]
+| 3 | pass:["你好世界"] | pass:[Chinese] | icon:check-square[role=green]
+|===
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Inline attachments can be used when having multiple cases
+
+icon:check-square[role=green] (0s 111ms)
+
+
+===== Case 1
+
+====
+color = blue
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a [.stepArgument]_pass:[blue]_ oval circle  image:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/oval-circle2.png[An oval drawn in Java]
+
+===== Case 2
+
+====
+color = red
+====
+
+[unstyled.steps]
+* [.introWord]*Given* a [.stepArgument]_pass:[red]_ oval circle  image:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/oval-circle3.png[An oval drawn in Java]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Large attachments can be zoomed
+
+icon:check-square[role=green] (0s 177ms)
+
+[unstyled.steps]
+* [.introWord]*Given* a large oval circle  image:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/large-oval-circle.png[An oval drawn in Java]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Steps can have multiple attachments
+
+icon:check-square[role=green] (0s 7ms)
+
+[unstyled.steps]
+* [.introWord]*Given* some text content [.stepArgument]_pass:["Hi There"]_ 
+* [.introWord]*Then* it can be added as an attachment multiple times to the step link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment5.plain[icon:file[],title=First Attachment] link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment6.plain[icon:file[],title=Second Attachment]
+
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== Thumbnails are shown when not drawn
+
+icon:check-square[role=green] (0s 404ms)
+
+[unstyled.steps]
+* [.introWord]*Given* an oval circle as thumbnail  link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/oval-circle-as-thumbnail.png[image:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/oval-circle-as-thumbnail-thumb.png[],title=An oval drawn in Java]
+// end::scenario-success[]

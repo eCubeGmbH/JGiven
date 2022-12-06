@@ -1,0 +1,48 @@
+=== Nested Steps
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 1 Failed, icon:ban[role=grey] 0 Pending, 2 Total (0s 7ms)
+
+// tag::scenario-success[]
+// tag::tag-FailingOnPurpose[]
+
+==== A scenario with a failing nested step on purpose
+
+icon:exclamation-circle[role=red] (0s 1ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.steps]
+* [.introWord]*Given* I fill out the registration form with invalid values [.right]#icon:exclamation-circle[role=red] (0s 1ms)#
+[none]
+** I enter a name [.stepArgument]_pass:[Franky]_ [.right]#icon:check-square[role=green] (0s 0ms)#
+[none]
+*** I think a name [.stepArgument]_pass:[Franky]_ [.right]#icon:check-square[role=green] (0s 0ms)#
+*** [.introWord]*and* I write the name [.stepArgument]_pass:[Franky]_ [.right]#icon:check-square[role=green] (0s 0ms)#
+** [.introWord]*and* I enter a email address [.stepArgument]_pass:[franky@acme.com]_ [.right]#icon:check-square[role=green] (0s 0ms)#
+** [.introWord]*and* something fails for demonstration purposes [.right]#icon:exclamation-circle[role=red] (0s 0ms)#
+* [.introWord]*When* I submit the form [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*Then* the password matches [.right]#icon:ban[role=grey] (0s 0ms)#
+// end::tag-FailingOnPurpose[]
+// end::scenario-success[]
+
+// tag::scenario-success[]
+
+==== A scenario with nested steps
+
+icon:check-square[role=green] (0s 5ms)
+
+This scenario contains nested steps.
+
+[unstyled.steps]
+* [.introWord]*Given* I fill out the registration form with valid values
+[none]
+** I enter a name [.stepArgument]_pass:[Franky]_
+[none]
+*** I think a name [.stepArgument]_pass:[Franky]_
+*** [.introWord]*and* I write the name [.stepArgument]_pass:[Franky]_ 
+** [.introWord]*and* I enter a email address [.stepArgument]_pass:[franky@acme.com]_ 
+** [.introWord]*and* I enter a password [.stepArgument]_pass:[password1234]_ 
+** [.introWord]*and* I enter a repeated password [.stepArgument]_pass:[password1234]_ 
+* [.introWord]*When* I submit the form 
+* [.introWord]*Then* the password matches
+// end::scenario-success[]

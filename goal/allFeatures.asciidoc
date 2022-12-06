@@ -1,0 +1,7 @@
+include::features/com.tngtech.jgiven.examples.attachments.AttachmentsExample.asciidoc[]
+
+include::features/com.tngtech.jgiven.examples.nested.NestedStepsTest.asciidoc[]
+
+include::features/com.tngtech.jgiven.examples.pending.PendingExampleTest.asciidoc[]
+
+include::features/com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.asciidoc[]

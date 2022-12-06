@@ -1,0 +1,7 @@
+:feature-dir: ../features/
+
+=== FailingOnPurpose
+
+include::{feature-dir}/com.tngtech.jgiven.examples.nested.NestedStepsTest.asciidoc[tag=tag-FailingOnPurpose]
+
+include::{feature-dir}/com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.asciidoc[tag=tag-FailingOnPurpose]

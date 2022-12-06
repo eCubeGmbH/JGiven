@@ -1,0 +1,56 @@
+=== Pending Example
+
+icon:check-square[role=green] 0 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=grey] 3 Pending, 3 Total (0s 5ms)
+
+As a good BDD practitioner,<br>I want to write my scenarios before I start coding<br>In order to discuss them with business stakeholders
+
+
+// tag::scenario-pending[]
+
+==== Multiple cases can be pending
+
+icon:ban[role=grey] (0s 3ms)
+
+Tags: _Pending Annotation_
+
+[unstyled.steps]
+* [.introWord]*Given* some state [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*When* a [.stepArgument]*<actionCount>* action [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*Then* some result [.right]#icon:ban[role=grey] (0s 0ms)#
+
+.Cases
+[options="header"]
+|===
+| #  | actionCount | Status
+| 1 | pass:[1st] | icon:ban[role=grey]
+| 2 | pass:[2nd] | icon:ban[role=grey]
+|===
+// end::scenario-pending[]
+
+// tag::scenario-pending[]
+
+==== Scenarios that are pending can be annotated with the Pending annotation
+
+icon:ban[role=grey] (0s 0ms)
+
+Tags: _Pending Annotation_
+
+[unstyled.steps]
+* [.introWord]*Given* some state [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*When* some action [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*Then* some result [.right]#icon:ban[role=grey] (0s 0ms)#
+// end::scenario-pending[]
+
+// tag::scenario-pending[]
+
+==== Single steps can be annotated with Pending
+
+icon:ban[role=grey] (0s 1ms)
+
+Tags: _Pending Annotation_
+
+[unstyled.steps]
+* [.introWord]*Given* some state [.right]#icon:check-square[role=green] (0s 0ms)#
+* [.introWord]*When* some pending action [.right]#icon:ban[role=grey] (0s 0ms)#
+* [.introWord]*Then* some result [.right]#icon:check-square[role=green] (0s 0ms)#
+// end::scenario-pending[]

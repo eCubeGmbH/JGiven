@@ -1,0 +1,5 @@
+:feature-dir: ../features/
+
+=== TagsWithCustomStyle
+
+include::{feature-dir}/com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.asciidoc[tag=tag-TagsWithCustomStyle]

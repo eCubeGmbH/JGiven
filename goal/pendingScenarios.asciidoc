@@ -1,0 +1,1 @@
+include::features/com.tngtech.jgiven.examples.pending.PendingExampleTest.asciidoc[tag=scenario-pending]
