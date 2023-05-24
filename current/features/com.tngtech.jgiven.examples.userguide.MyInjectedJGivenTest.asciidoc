@@ -1,0 +1,21 @@
+=== My Injected J Given
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (0ms)
+
+// tag::scenario-successful[]
+
+==== Something should happen
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some state
+
+* [.jg-intro-word]*And* some additional state
+
+* [.jg-intro-word]*When* some action
+
+* [.jg-intro-word]*Then* some outcome
+
+// end::scenario-successful[]
+

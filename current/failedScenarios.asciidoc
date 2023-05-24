@@ -1,0 +1,16 @@
+== Failed Scenarios
+
+There are 7 failed scenarios
+
+:leveloffset: -1
+
+include::features/com.tngtech.jgiven.examples.FailingScenarioTest.asciidoc[tag=scenario-failed]
+
+include::features/com.tngtech.jgiven.examples.nested.NestedStepsTest.asciidoc[tag=scenario-failed]
+
+include::features/com.tngtech.jgiven.examples.parameters.ParametrizedScenariosTest.asciidoc[tag=scenario-failed]
+
+include::features/com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.asciidoc[tag=scenario-failed]
+
+
+:leveloffset: +1

@@ -1,0 +1,33 @@
+=== Parameterized Pan Cake Scenario
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (2ms)
+
+// tag::scenario-successful[]
+
+==== A meal can be fried out of an egg milk and some ingredient
+
+icon:check-square[role=green] (2ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an egg
+
+* [.jg-intro-word]*And* some milk
+
+* [.jg-intro-word]*And* the ingredient [.jg-argument]*<ingredient>*
+
+* [.jg-intro-word]*When* the cook mangles everthing to a dough
+
+* [.jg-intro-word]*And* the cook fries the dough in a pan
+
+* [.jg-intro-word]*Then* the resulting meal is a [.jg-argument]*<expectedMeal>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | ingredient | expectedMeal | Status
+| 1 | flour | pancake | SUCCESS
+| 2 | sugar | mishmash | SUCCESS
+|===
+
+// end::scenario-successful[]
+

@@ -1,0 +1,111 @@
+=== Attachments Example
+
+icon:check-square[role=green] 7 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 7 Total (184ms)
+
+// tag::scenario-successful[]
+
+==== Attachments can be added to steps
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some text content [.jg-argument]_"Hello World"_
+
+* [.jg-intro-word]*Then* it can be added as an attachment to the step with title [.jg-argument]_Hi_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Attachments can be directly shown
+
+icon:check-square[role=green] (9ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an oval circle
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Attachments work with data tables
+
+icon:check-square[role=green] (4ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some text content [.jg-argument]*<content>*
+
+* [.jg-intro-word]*Then* it can be added as an attachment to the step with title [.jg-argument]*<title>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | content | title | Status
+| 1 | "Hello World" | English | SUCCESS
+| 2 | "Hallo Welt" | German | SUCCESS
+| 3 | "你好世界" | Chinese | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Inline attachments can be used when having multiple cases
+
+icon:check-square[role=green] (15ms)
+
+===== Case 1
+
+====
+color = blue
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a [.jg-argument]_blue_ oval circle
+
+===== Case 2
+
+====
+color = red
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a [.jg-argument]_red_ oval circle
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Large attachments can be zoomed
+
+icon:check-square[role=green] (51ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a large oval circle
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Steps can have multiple attachments
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some text content [.jg-argument]_"Hi There"_
+
+* [.jg-intro-word]*Then* it can be added as an attachment multiple times to the step
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Thumbnails are shown when not drawn
+
+icon:check-square[role=green] (102ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an oval circle as thumbnail
+
+// end::scenario-successful[]
+

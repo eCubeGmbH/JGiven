@@ -1,0 +1,37 @@
+.Total Statistics
+[options="header,footer"]
+|===
+| feature | total classes | successful scenarios | failed scenarios | pending scenarios | total scenarios | failed cases | total cases | total steps | duration
+| As Annotation Example | 1 | 4 | 0 | 0 | 4 | 0 | 4 | 6 | 1ms
+| Attachments Example | 1 | 7 | 0 | 0 | 7 | 0 | 10 | 15 | 184ms
+| Calculator | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 1 | 0ms
+| Common Stages | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 2 | 0ms
+| Current Step Example | 1 | 3 | 0 | 0 | 3 | 0 | 4 | 4 | 2ms
+| Data Table Examples | 1 | 11 | 0 | 0 | 11 | 0 | 11 | 13 | 44ms
+| Dynamic Tags | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 3 | 2ms
+| Extended Descriptions | 1 | 5 | 0 | 0 | 5 | 0 | 6 | 6 | 1ms
+| Extended Vocabulary | 1 | 2 | 0 | 0 | 2 | 0 | 2 | 8 | 2ms
+| Extended Vocabulary Pan Cake | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 7 | 42ms
+| Failing Scenario | 1 | 0 | 1 | 0 | 1 | 1 | 1 | 1 | 174ms
+| J Unit Params Serve Coffee | 1 | 1 | 0 | 0 | 1 | 0 | 4 | 28 | 3ms
+| Link Example One | 1 | 2 | 0 | 0 | 2 | 0 | 2 | 6 | 1ms
+| Link Example Two | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 3 | 0ms
+| My Dynamically Added | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 4 | 21ms
+| My Injected J Given | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 4 | 0ms
+| My Shiny J Given | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 3 | 0ms
+| Nested Steps | 1 | 1 | 1 | 0 | 2 | 1 | 2 | 17 | 7ms
+| Parameter Formatting | 1 | 1 | 0 | 0 | 1 | 0 | 2 | 4 | 0ms
+| Parameterized Pan Cake Scenario | 1 | 1 | 0 | 0 | 1 | 0 | 2 | 12 | 2ms
+| Parametrized Scenarios | 1 | 4 | 1 | 0 | 5 | 10 | 108 | 208 | 58ms
+| Pending Example | 1 | 0 | 0 | 3 | 3 | 0 | 4 | 12 | 3ms
+| Rocket | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 2 | 1ms
+| Rules Example | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 1 | 0ms
+| Section | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 7 | 0ms
+| Serve Coffee | 1 | 11 | 4 | 0 | 15 | 4 | 29 | 148 | 1s 121ms
+| Simple Scenario Test Example | 1 | 3 | 0 | 0 | 3 | 0 | 3 | 12 | 2ms
+| Spring Pan Cake Scenario | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 6 | 4ms
+| Step Tags | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 5 | 4ms
+| Tag Hierarchy Example | 1 | 2 | 0 | 0 | 2 | 0 | 2 | 6 | 1ms
+| Using Rules | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 3 | 0ms
+| sum | 31 | 72 | 7 | 3 | 82 | 16 | 210 | 557 | 1s 694ms
+|===

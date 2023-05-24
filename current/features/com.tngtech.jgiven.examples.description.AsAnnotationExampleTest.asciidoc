@@ -1,0 +1,56 @@
+=== As Annotation Example
+
+icon:check-square[role=green] 4 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 4 Total (1ms)
+
++++Demonstrates the usage of the @As annotation+++
+
+// tag::scenario-successful[]
+
+==== Scenario that shows the usage of @As with argument enumeration
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the reference to the first argument : [.jg-argument]_false_ and the second argument : [.jg-argument]_0_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Scenario that shows the usage of @As with argument names
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the reference to the second argument : [.jg-argument]_1_ and the first argument : [.jg-argument]_true_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Scenario that shows the usage of the @As annotation
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* something else
+
+* [.jg-intro-word]*,* something else
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Scenarios can have an extended description
+
+icon:check-square[role=green]
+
++++This scenario has a very long <tt>@ExtendedDescription</tt>. Extended descriptions can give additional information about the rational of a scenario. You can even use <b>HTML</b>.+++
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* something else
+
+* [.jg-intro-word]*And* something else
+
+// end::scenario-successful[]
+

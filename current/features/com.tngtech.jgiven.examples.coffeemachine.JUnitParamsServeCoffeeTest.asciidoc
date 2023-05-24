@@ -1,0 +1,39 @@
+=== J Unit Params Serve Coffee
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (3ms)
+
+// tag::scenario-successful[]
+
+==== Buy a coffee
+
+icon:check-square[role=green] (3ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<coffees>* coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*And* the machine is [.jg-argument]*<onOrOff>*
+
+* [.jg-intro-word]*And* the coffee costs [.jg-argument]_2_ euros
+
+* [.jg-intro-word]*When* I insert [.jg-argument]*<dollars>* one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I [.jg-argument]*<shouldOrShouldNot>* be served a coffee
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,1,1,>1"]
+|===
+| # | coffees | onOrOff | dollars | shouldOrShouldNot | Status
+| 1 | 1 | on | 1 | should not | SUCCESS
+| 2 | 1 | on | 2 | should | SUCCESS
+| 3 | 0 | on | 2 | should not | SUCCESS
+| 4 | 1 | off | 2 | should not | SUCCESS
+|===
+
+// end::scenario-successful[]
+

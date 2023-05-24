@@ -1,0 +1,630 @@
+=== Serve Coffee
+
+icon:check-square[role=green] 11 Successful, icon:exclamation-circle[role=red] 4 Failed, icon:ban[role=silver] 0 Pending, 15 Total (1s 121ms)
+
++++In order to refresh myself</br>as a customer</br>I want coffee to be served+++
+
+// tag::scenario-failed[]
+
+==== A failing scenario for demonstration purposes
+
+icon:exclamation-circle[role=red] (20ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine icon:check-square[role=green] +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are no more coffees left icon:check-square[role=green]
+
+* [.jg-intro-word]*When* I press the coffee button icon:check-square[role=green]
+
+* [.jg-intro-word]*Then* I should be served a coffee icon:exclamation-circle[role=red]
+
+* [.jg-intro-word]*And* steps following a failed step should be skipped icon:ban[role=silver] +
+  _+++This step is still visible in the report, but was actually not executed. It is marked as skipped in the report.+++_
+
+.org.opentest4j.AssertionFailedError: 
+[.jg-exception%collapsible]
+====
+expected: true
+ but was: false
+
+....
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee.I_should_be_served_a_coffee(ThenCoffee.java:30)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee.I_should_be_served_a_coffee(ThenCoffee.java:58)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.I_should_be_served_a_coffee$accessor$l4LzqPjN(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8$auxiliary$LFK0cHyV.call(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.I_should_be_served_a_coffee(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.a_failing_scenario_for_demonstration_purposes(ServeCoffeeTest.java:148)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+org.junit.rules.RunRules.evaluate(RunRules.java:20)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+....
+====
+
+
+// end::scenario-failed[]
+
+// tag::scenario-failed[]
+
+==== A scenario with a failing test case for demonstration purposes
+
+icon:exclamation-circle[role=red] (5ms)
+
+Tags: _FailingOnPurpose_
+
+===== Case 1
+
+====
+withCoffees = true
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]_2_ coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_2_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I should be served a coffee
+
+===== Case 2
+
+====
+withCoffees = false
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine icon:check-square[role=green] +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_2_ one euro coins icon:check-square[role=green]
+
+* [.jg-intro-word]*And* I press the coffee button icon:check-square[role=green]
+
+* [.jg-intro-word]*Then* I should be served a coffee icon:exclamation-circle[role=red] (2ms)
+
+.org.opentest4j.AssertionFailedError: 
+[.jg-exception%collapsible]
+====
+expected: true
+ but was: false
+
+....
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee.I_should_be_served_a_coffee(ThenCoffee.java:30)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee.I_should_be_served_a_coffee(ThenCoffee.java:58)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.I_should_be_served_a_coffee$accessor$l4LzqPjN(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8$auxiliary$LFK0cHyV.call(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.I_should_be_served_a_coffee(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.a_scenario_with_a_failing_test_case_for_demonstration_purposes(ServeCoffeeTest.java:167)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+com.tngtech.java.junit.dataprovider.DataProviderFrameworkMethod.invokeExplosively(DataProviderFrameworkMethod.java:76)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+org.junit.rules.RunRules.evaluate(RunRules.java:20)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+....
+====
+
+
+// end::scenario-failed[]
+
+// tag::scenario-successful[]
+
+==== A turned off coffee machine cannot serve coffee
+
+icon:check-square[role=green] (2ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* the machine is turned off
+
+* [.jg-intro-word]*When* I press the coffee button
+
+* [.jg-intro-word]*Then* no coffee should be served
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== An empty coffee machine cannot serve any coffee
+
+icon:check-square[role=green] (1ms)
+
+Tags: _Order_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an empty coffee machine
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_5_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* an error should be shown
+
+* [.jg-intro-word]*And* no coffee should be served
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Buy a coffee
+
+icon:check-square[role=green] (11ms)
+
+Tags: _TagsWithCustomStyle_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<coffees>* coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*And* the machine is [.jg-argument]*<onOrOff>*
+
+* [.jg-intro-word]*And* the coffee costs [.jg-argument]_2_ euros
+
+* [.jg-intro-word]*When* I insert [.jg-argument]*<dollars>* one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I [.jg-argument]*<shouldOrShouldNot>* be served a coffee
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,1,1,>1"]
+|===
+| # | coffees | onOrOff | dollars | shouldOrShouldNot | Status
+| 1 | 1 | on | 1 | should not | SUCCESS
+| 2 | 1 | on | 2 | should | SUCCESS
+| 3 | 0 | on | 2 | should not | SUCCESS
+| 4 | 1 | off | 2 | should not | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Coffe making gets better
+
+icon:check-square[role=green] (5ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*When* I make coffee for the [.jg-argument]*<runNr>* time
+
+* [.jg-intro-word]*Then* the result is [.jg-argument]*<result>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,1,>1"]
+|===
+| # | Description | runNr | result | Status
+| 1 | On the first run | 1 | quite ok | SUCCESS
+| 2 | And on the second run | 2 | well-done | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Coffee is not served
+
+icon:check-square[role=green] (4ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* the coffee costs [.jg-argument]_2_ euros
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<coffees>* coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]*<euros>* one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I should not be served a coffee
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | coffees | euros | Status
+| 1 | 1 | 1 | SUCCESS
+| 2 | 0 | 2 | SUCCESS
+| 3 | 1 | 0 | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Correct messages are shown
+
+icon:check-square[role=green] (10ms)
+
+Tags: _Data Tables_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<coffees left>* coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]*<number of coins>* one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* the message [.jg-argument]*<message>* is shown
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,1,>1"]
+|===
+| # | coffees left | number of coins | message | Status
+| 1 | 0 | 0 | Error: No coffees left | SUCCESS
+| 2 | 0 | 1 | Error: No coffees left | SUCCESS
+| 3 | 1 | 0 | Error: Insufficient money | SUCCESS
+| 4 | 0 | 5 | Error: No coffees left | SUCCESS
+| 5 | 1 | 5 | Enjoy your coffee! | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Intro words are not required
+
+icon:check-square[role=green] (1ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* the coffee costs [.jg-argument]_5_ euros
+
+* there are [.jg-argument]_3_ coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I press the coffee button
+
+* [.jg-intro-word]*Then* an error should be shown
+
+* no coffee should be served
+
+// end::scenario-successful[]
+
+// tag::scenario-failed[]
+
+==== Long error messages should wrapped
+
+icon:exclamation-circle[role=red]
+
+Tags: _FailingOnPurpose_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an exception with a very long message icon:exclamation-circle[role=red]
+
+.java.lang.RuntimeException: This is a very long exception message that should be wrapped at some point in the report and it is even longer than that
+[.jg-exception%collapsible]
+====
+....
+com.tngtech.jgiven.examples.coffeemachine.steps.GivenCoffee.an_exception_with_a_very_long_message(GivenCoffee.java:57)
+com.tngtech.jgiven.examples.coffeemachine.steps.GivenCoffee$ByteBuddy$CawmqOAR.an_exception_with_a_very_long_message$accessor$XXLbcv9O(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.GivenCoffee$ByteBuddy$CawmqOAR$auxiliary$2lU5k1qB.call(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.steps.GivenCoffee$ByteBuddy$CawmqOAR.an_exception_with_a_very_long_message(Unknown Source)
+com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.long_error_messages_should_wrapped(ServeCoffeeTest.java:231)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+org.junit.rules.RunRules.evaluate(RunRules.java:20)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+....
+====
+
+
+// end::scenario-failed[]
+
+// tag::scenario-successful[]
+
+==== No coffee left error is shown when there is no coffee left
+
+icon:check-square[role=green] (4ms)
+
+Tags: _Order_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an empty coffee machine
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_5_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* the message [.jg-argument]_Error: No coffees left_ is shown
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Not enough money message is shown when insufficient money was given
+
+icon:check-square[role=green] (1ms)
+
+Tags: _Order_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]_2_ coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_1_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* the message [.jg-argument]_Error: Insufficient money_ is shown
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Serving a coffee reduces the number of available coffees by one
+
+icon:check-square[role=green] (10ms)
+
+Tags: _Data Tables_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<initial coffees>* coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_2_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* a coffee should be served
+
+* [.jg-intro-word]*And* there are [.jg-argument]*<coffees left>* coffees left in the machine [.jg-argument]*<coffees left>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | initial coffees | coffees left | Status
+| 1 | 1 | 0 | SUCCESS
+| 2 | 3 | 2 | SUCCESS
+| 3 | 10 | 9 | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-failed[]
+
+==== Should fail with unexpected runtime exception
+
+icon:exclamation-circle[role=red] (1s 8ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Then* [.jg-argument]_should throw a runtime exception_ icon:exclamation-circle[role=red] (1s 0ms)
+
+.java.lang.InterruptedException: sleep interrupted
+[.jg-exception%collapsible]
+====
+....
+java.base@11.0.16.1/java.lang.Thread.sleep(Native Method)
+app//com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest$1.apply(ServeCoffeeTest.java:209)
+app//com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest$1.apply(ServeCoffeeTest.java:205)
+app//com.tngtech.jgiven.base.StageBase.$(StageBase.java:43)
+app//com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.$$accessor$l4LzqPjN(Unknown Source)
+app//com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8$auxiliary$RSo8W9ea.call(Unknown Source)
+app//com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.$(Unknown Source)
+app//com.tngtech.jgiven.examples.coffeemachine.steps.ThenCoffee$ByteBuddy$SyWjwby8.$(Unknown Source)
+app//com.tngtech.jgiven.examples.coffeemachine.ServeCoffeeTest.shouldFailWithUnexpectedRuntimeException(ServeCoffeeTest.java:204)
+java.base@11.0.16.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base@11.0.16.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base@11.0.16.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+app//org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+app//org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+java.base@11.0.16.1/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+java.base@11.0.16.1/java.lang.Thread.run(Thread.java:829)
+....
+====
+
+
+// end::scenario-failed[]
+
+// tag::scenario-successful[]
+
+==== Turned off machines should not serve coffee
+
+icon:check-square[role=green] (32ms)
+
+Tags: _Case Diffs_
+
+===== Case 1
+
+====
+onOrOff = true
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]_2_ coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*And* the machine is [.jg-argument]_on_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_2_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I should be served a coffee
+
+===== Case 2
+
+====
+onOrOff = false
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine +
+  _+++An empty coffee machine that is already turned on.<br>The coffee price is set to 2 EUR.+++_
+
+* [.jg-intro-word]*And* there are [.jg-argument]_2_ coffees left in the machine +
+  _+++The number of coffees in the machine is set to the given value.+++_
+
+* [.jg-intro-word]*And* the machine is [.jg-argument]_off_
+
+* [.jg-intro-word]*When* I insert [.jg-argument]_2_ one euro coins
+
+* [.jg-intro-word]*And* I press the coffee button
+
+* [.jg-intro-word]*Then* I should not be served a coffee
+
+* [.jg-intro-word]*And* no error is shown
+
+// end::scenario-successful[]
+

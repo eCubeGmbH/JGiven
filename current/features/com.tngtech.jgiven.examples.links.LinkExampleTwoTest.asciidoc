@@ -1,0 +1,21 @@
+=== Link Example Two
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (0ms)
+
+// tag::scenario-successful[]
+
+==== Link to another test
+
+icon:check-square[role=green]
+
+Tags: _LinkToTest_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* test linked to another test
+
+* [.jg-intro-word]*When* the report is generated
+
+* [.jg-intro-word]*Then* the link appears in the report
+
+// end::scenario-successful[]
+

@@ -1,0 +1,25 @@
+=== Step Tags
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (4ms)
+
+// tag::scenario-successful[]
+
+==== Premium members can order premium products
+
+icon:check-square[role=green] (4ms)
+
+Tags: _PremiumMembership_, _Shop_, _PremiumProduct_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a premium customer
+
+* [.jg-intro-word]*And* a product
+
+* [.jg-intro-word]*And* the product is only available for premium members
+
+* [.jg-intro-word]*When* the customer orders the product
+
+* [.jg-intro-word]*Then* the product is shipped
+
+// end::scenario-successful[]
+

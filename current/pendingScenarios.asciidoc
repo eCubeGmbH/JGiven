@@ -1,0 +1,10 @@
+== Pending Scenarios
+
+There are 3 pending scenarios
+
+:leveloffset: -1
+
+include::features/com.tngtech.jgiven.examples.pending.PendingExampleTest.asciidoc[tag=scenario-pending]
+
+
+:leveloffset: +1

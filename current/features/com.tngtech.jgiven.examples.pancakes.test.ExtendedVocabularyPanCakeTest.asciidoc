@@ -1,0 +1,27 @@
+=== Extended Vocabulary Pan Cake
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (42ms)
+
+// tag::scenario-successful[]
+
+==== A pancake can be fried out of an egg milk and flour
+
+icon:check-square[role=green] (42ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some (fresh) ingredients, consisting of:
+
+* an egg
+
+* some milk
+
+* the ingredient [.jg-argument]_flour_
+
+* [.jg-intro-word]*When* the cook mangles everthing to a dough
+
+* [.jg-intro-word]*And* the cook fries the dough in a pan
+
+* [.jg-intro-word]*Then* the resulting meal is a pan cake
+
+// end::scenario-successful[]
+

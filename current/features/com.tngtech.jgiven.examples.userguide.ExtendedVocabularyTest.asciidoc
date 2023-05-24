@@ -1,0 +1,38 @@
+=== Extended Vocabulary
+
+icon:check-square[role=green] 2 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 2 Total (2ms)
+
+// tag::scenario-successful[]
+
+==== With filler words
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the ingredients
+
+* an egg
+
+* some milk
+
+* and the ingredient [.jg-argument]_flour_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== With joining words
+
+icon:check-square[role=green] (2ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a (clean) worksurface, a bowl and the ingredients:
+
+* an egg
+
+* some milk
+
+* the ingredient [.jg-argument]_flour_
+
+// end::scenario-successful[]
+

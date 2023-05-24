@@ -1,0 +1,213 @@
+=== Data Table Examples
+
+icon:check-square[role=green] 11 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 11 Total (44ms)
+
+// tag::scenario-successful[]
+
+==== A list of list can be used as table parameter
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of lists is used as parameter
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| Name | Email 
+| John Doe | john@doe.com 
+| Jane Roe | jane@roe.com 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A list of list can be used as table parameter and column titles can be set
+
+icon:check-square[role=green] (7ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of lists is used as parameter with column titles
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| Name | Email 
+| John Doe | john@doe.com 
+| Jane Roe | jane@roe.com 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A list of POJOs can be represented as a data table with a vertical header
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs is used as parameters with header type VERTICAL
++
+[.jg-argumentTable,cols="h,1,1"]
+|===
+| name | John Doe | Jane Roe 
+| email | (quoted at POJO field level) "john@doe.com" | (quoted at POJO field level) "jane@roe.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A list of POJOs can be represented as a data table with a vertical header and numbered columns
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs is used as parameters with header type VERTICAL and numbered columns
++
+[.jg-argumentTable,cols="h,1,1"]
+|===
+| # | 1 | 2 
+| name | John Doe | Jane Roe 
+| email | (quoted at POJO field level) "john@doe.com" | (quoted at POJO field level) "jane@roe.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A list of POJOs can be represented as data tables
+
+icon:check-square[role=green] (18ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs is used as parameters
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| name | email 
+| John Doe | (quoted at POJO field level) "john@doe.com" 
+| Jane Roe | (quoted at POJO field level) "jane@roe.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A list of POJOs can be represented as formatted data tables
+
+icon:check-square[role=green] (10ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs is used as parameters and some fields are formatted using inline specified named formats
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| name | email 
+| (uppercased by custom format annotation) JOHN DOE | john@doe.com 
+| (uppercased by custom format annotation) JANE ROE | jane@roe.com 
+|===
+
+* [.jg-intro-word]*And* a list of POJOs is used as parameters and some fields are formatted using a predefined set of named formats
++
+[.jg-argumentTable%header,cols="1,1,1"]
+|===
+| name | email | shippingAddress 
+| JOHN DOE | (quoted by custom format annotation) "john@doe.com" | null 
+| JANE ROE | (quoted by custom format annotation) "jane@roe.com" | [90017/LOS ANGELES/US] 
+|===
+
+* [.jg-intro-word]*And* a list of POJOs is used as parameters and some fields are formatted using a predefined set of named formats
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| name | email 
+| JOHN DOE | (quoted by custom format annotation) "null" 
+|  | (quoted by custom format annotation) "jane@roe.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== A single POJO can be represented as a data table
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a single POJO is used as parameters
++
+[.jg-argumentTable,cols="h,1"]
+|===
+| name | Jane Roe 
+| email | (quoted at POJO field level) "jane@roe.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Empty lists also work
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of lists is used as parameter
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Parameter tables can have numbered rows
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs with numbered rows
++
+[.jg-argumentTable%header,cols="1,1,1"]
+|===
+| # | name | email 
+| 1 | John Doe | (quoted at POJO field level) "john@doe.com" 
+| 2 | Jane Roe | (quoted at POJO field level) "jane@roe.com" 
+| 3 | Lee Smith | (quoted at POJO field level) "lee@smith.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Parameter tables can have numbered rows with custom headers
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a list of POJOs with numbered rows and custom header
++
+[.jg-argumentTable%header,cols="1,1,1"]
+|===
+| Counter | name | email 
+| 1 | John Doe | (quoted at POJO field level) "john@doe.com" 
+| 2 | Jane Roe | (quoted at POJO field level) "jane@roe.com" 
+| 3 | Lee Smith | (quoted at POJO field level) "lee@smith.com" 
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Two dimensional arrays can be numbered
+
+icon:check-square[role=green] (3ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a two dimensional array with numbered rows
++
+[.jg-argumentTable%header,cols="1,1"]
+|===
+| # | t 
+| 1 | a 
+| 2 | b 
+|===
+
+// end::scenario-successful[]
+

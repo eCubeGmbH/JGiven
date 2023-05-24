@@ -1,0 +1,18 @@
+=== Rocket
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (1ms)
+
+// tag::scenario-successful[]
+
+==== First Test of new Rocket
+
+icon:check-square[role=green] (1ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*When* launch rocket +
+  _+++Actually uses a rocket simulator+++_
+
+* [.jg-intro-word]*Then* rocket is launched
+
+// end::scenario-successful[]
+

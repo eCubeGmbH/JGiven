@@ -1,0 +1,21 @@
+=== Dynamic Tags
+
+icon:check-square[role=green] 1 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 1 Total (2ms)
+
+// tag::scenario-successful[]
+
+==== Tags can be added dynamically
+
+icon:check-square[role=green] (2ms)
+
+Tags: _CarOrder_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* an order for a [.jg-argument]_BMW_ car
+
+* [.jg-intro-word]*When* the order is processed
+
+* [.jg-intro-word]*Then* the car is sent to manufacturing
+
+// end::scenario-successful[]
+

@@ -1,0 +1,217 @@
+=== Parametrized Scenarios
+
+icon:check-square[role=green] 4 Successful, icon:exclamation-circle[role=red] 1 Failed, icon:ban[role=silver] 0 Pending, 5 Total (58ms)
+
+// tag::scenario-failed[]
+
+==== A scenario with many cases
+
+icon:exclamation-circle[role=red] (50ms)
+
++++This scenario shows how large case tables are shown in JGiven. As soon as a table has more than 2 entries, grouping by values is possible. This scenario also has some failing steps for demonstration purposes.<p>Btw. this description was created with the <a target='_blank' href='http://jgiven.org/javadoc/com/tngtech/jgiven/annotation/ExtendedDescription.html'>@ExtendedDescription</a> annotation+++
+
+Tags: _FailingOnPurpose_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some group value [.jg-argument]*<grouping>*
+
+* [.jg-intro-word]*And* another value [.jg-argument]*<value>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | grouping | value | Status
+| 1 | some grouping value 0 | value 0 | SUCCESS
+| 2 | some grouping value 0 | value 1 | SUCCESS
+| 3 | some grouping value 0 | value 2 | SUCCESS
+| 4 | some grouping value 0 | value 3 | SUCCESS
+| 5 | some grouping value 0 | value 4 | SUCCESS
+| 6 | some grouping value 0 | value 5 | FAILED
+| 7 | some grouping value 0 | value 6 | SUCCESS
+| 8 | some grouping value 0 | value 7 | SUCCESS
+| 9 | some grouping value 0 | value 8 | SUCCESS
+| 10 | some grouping value 0 | value 9 | SUCCESS
+| 11 | some grouping value 1 | value 0 | SUCCESS
+| 12 | some grouping value 1 | value 1 | SUCCESS
+| 13 | some grouping value 1 | value 2 | SUCCESS
+| 14 | some grouping value 1 | value 3 | SUCCESS
+| 15 | some grouping value 1 | value 4 | SUCCESS
+| 16 | some grouping value 1 | value 5 | FAILED
+| 17 | some grouping value 1 | value 6 | SUCCESS
+| 18 | some grouping value 1 | value 7 | SUCCESS
+| 19 | some grouping value 1 | value 8 | SUCCESS
+| 20 | some grouping value 1 | value 9 | SUCCESS
+| 21 | some grouping value 2 | value 0 | SUCCESS
+| 22 | some grouping value 2 | value 1 | SUCCESS
+| 23 | some grouping value 2 | value 2 | SUCCESS
+| 24 | some grouping value 2 | value 3 | SUCCESS
+| 25 | some grouping value 2 | value 4 | SUCCESS
+| 26 | some grouping value 2 | value 5 | FAILED
+| 27 | some grouping value 2 | value 6 | SUCCESS
+| 28 | some grouping value 2 | value 7 | SUCCESS
+| 29 | some grouping value 2 | value 8 | SUCCESS
+| 30 | some grouping value 2 | value 9 | SUCCESS
+| 31 | some grouping value 3 | value 0 | SUCCESS
+| 32 | some grouping value 3 | value 1 | SUCCESS
+| 33 | some grouping value 3 | value 2 | SUCCESS
+| 34 | some grouping value 3 | value 3 | SUCCESS
+| 35 | some grouping value 3 | value 4 | SUCCESS
+| 36 | some grouping value 3 | value 5 | FAILED
+| 37 | some grouping value 3 | value 6 | SUCCESS
+| 38 | some grouping value 3 | value 7 | SUCCESS
+| 39 | some grouping value 3 | value 8 | SUCCESS
+| 40 | some grouping value 3 | value 9 | SUCCESS
+| 41 | some grouping value 4 | value 0 | SUCCESS
+| 42 | some grouping value 4 | value 1 | SUCCESS
+| 43 | some grouping value 4 | value 2 | SUCCESS
+| 44 | some grouping value 4 | value 3 | SUCCESS
+| 45 | some grouping value 4 | value 4 | SUCCESS
+| 46 | some grouping value 4 | value 5 | FAILED
+| 47 | some grouping value 4 | value 6 | SUCCESS
+| 48 | some grouping value 4 | value 7 | SUCCESS
+| 49 | some grouping value 4 | value 8 | SUCCESS
+| 50 | some grouping value 4 | value 9 | SUCCESS
+| 51 | some grouping value 5 | value 0 | SUCCESS
+| 52 | some grouping value 5 | value 1 | SUCCESS
+| 53 | some grouping value 5 | value 2 | SUCCESS
+| 54 | some grouping value 5 | value 3 | SUCCESS
+| 55 | some grouping value 5 | value 4 | SUCCESS
+| 56 | some grouping value 5 | value 5 | FAILED
+| 57 | some grouping value 5 | value 6 | SUCCESS
+| 58 | some grouping value 5 | value 7 | SUCCESS
+| 59 | some grouping value 5 | value 8 | SUCCESS
+| 60 | some grouping value 5 | value 9 | SUCCESS
+| 61 | some grouping value 6 | value 0 | SUCCESS
+| 62 | some grouping value 6 | value 1 | SUCCESS
+| 63 | some grouping value 6 | value 2 | SUCCESS
+| 64 | some grouping value 6 | value 3 | SUCCESS
+| 65 | some grouping value 6 | value 4 | SUCCESS
+| 66 | some grouping value 6 | value 5 | FAILED
+| 67 | some grouping value 6 | value 6 | SUCCESS
+| 68 | some grouping value 6 | value 7 | SUCCESS
+| 69 | some grouping value 6 | value 8 | SUCCESS
+| 70 | some grouping value 6 | value 9 | SUCCESS
+| 71 | some grouping value 7 | value 0 | SUCCESS
+| 72 | some grouping value 7 | value 1 | SUCCESS
+| 73 | some grouping value 7 | value 2 | SUCCESS
+| 74 | some grouping value 7 | value 3 | SUCCESS
+| 75 | some grouping value 7 | value 4 | SUCCESS
+| 76 | some grouping value 7 | value 5 | FAILED
+| 77 | some grouping value 7 | value 6 | SUCCESS
+| 78 | some grouping value 7 | value 7 | SUCCESS
+| 79 | some grouping value 7 | value 8 | SUCCESS
+| 80 | some grouping value 7 | value 9 | SUCCESS
+| 81 | some grouping value 8 | value 0 | SUCCESS
+| 82 | some grouping value 8 | value 1 | SUCCESS
+| 83 | some grouping value 8 | value 2 | SUCCESS
+| 84 | some grouping value 8 | value 3 | SUCCESS
+| 85 | some grouping value 8 | value 4 | SUCCESS
+| 86 | some grouping value 8 | value 5 | FAILED
+| 87 | some grouping value 8 | value 6 | SUCCESS
+| 88 | some grouping value 8 | value 7 | SUCCESS
+| 89 | some grouping value 8 | value 8 | SUCCESS
+| 90 | some grouping value 8 | value 9 | SUCCESS
+| 91 | some grouping value 9 | value 0 | SUCCESS
+| 92 | some grouping value 9 | value 1 | SUCCESS
+| 93 | some grouping value 9 | value 2 | SUCCESS
+| 94 | some grouping value 9 | value 3 | SUCCESS
+| 95 | some grouping value 9 | value 4 | SUCCESS
+| 96 | some grouping value 9 | value 5 | FAILED
+| 97 | some grouping value 9 | value 6 | SUCCESS
+| 98 | some grouping value 9 | value 7 | SUCCESS
+| 99 | some grouping value 9 | value 8 | SUCCESS
+| 100 | some grouping value 9 | value 9 | SUCCESS
+|===
+
+// end::scenario-failed[]
+
+// tag::scenario-successful[]
+
+==== Cases can have custom descriptions
+
+icon:check-square[role=green] (1ms)
+
+===== Case 1 This is the first case
+
+====
+description = This is the first case, value = true
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the power light [.jg-argument]_is_ on
+
+===== Case 2 This is another case
+
+====
+description = This is another case, value = false
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a machine that is [.jg-argument]_on_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Custom descriptions of cases appear as a separate column in the data table
+
+icon:check-square[role=green] (1ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the power light [.jg-argument]*<value>* on
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | Description | value | Status
+| 1 | This is the first case | is | SUCCESS
+| 2 | This is another case | is not | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Multiple cases are reported if a data table cannot be generated
+
+icon:check-square[role=green]
+
+===== Case 1
+
+====
+value = true
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* the power light [.jg-argument]_is_ on
+
+===== Case 2
+
+====
+value = false
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a machine that is [.jg-argument]_on_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Parameter values with very long text are truncated in the html report
+
+icon:check-square[role=green] (4ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a very long parameter value [.jg-argument]*<x>*
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | Description | x | Status
+| 1 | 1 | 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | SUCCESS
+| 2 | 2 | 2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | SUCCESS
+|===
+
+// end::scenario-successful[]
+

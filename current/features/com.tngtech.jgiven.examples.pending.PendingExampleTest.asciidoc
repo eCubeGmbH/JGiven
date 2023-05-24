@@ -1,0 +1,65 @@
+=== Pending Example
+
+icon:check-square[role=green] 0 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 3 Pending, 3 Total (3ms)
+
++++As a good BDD practitioner,<br>I want to write my scenarios before I start coding<br>In order to discuss them with business stakeholders+++
+
+// tag::scenario-pending[]
+
+==== Multiple cases can be pending
+
+icon:ban[role=silver] (1ms)
+
+Tags: _Pending Annotation_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some state icon:ban[role=silver]
+
+* [.jg-intro-word]*When* a [.jg-argument]*<actionCount>* action icon:ban[role=silver]
+
+* [.jg-intro-word]*Then* some result icon:ban[role=silver]
+
+.Cases
+[.jg-casesTable%header,cols="h,1,>1"]
+|===
+| # | actionCount | Status
+| 1 | 1st | SCENARIO_PENDING
+| 2 | 2nd | SCENARIO_PENDING
+|===
+
+// end::scenario-pending[]
+
+// tag::scenario-pending[]
+
+==== Scenarios that are pending can be annotated with the Pending annotation
+
+icon:ban[role=silver]
+
+Tags: _Pending Annotation_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some state icon:ban[role=silver]
+
+* [.jg-intro-word]*When* some action icon:ban[role=silver]
+
+* [.jg-intro-word]*Then* some result icon:ban[role=silver]
+
+// end::scenario-pending[]
+
+// tag::scenario-pending[]
+
+==== Single steps can be annotated with Pending
+
+icon:ban[role=silver]
+
+Tags: _Pending Annotation_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some state icon:check-square[role=green]
+
+* [.jg-intro-word]*When* some pending action icon:ban[role=silver]
+
+* [.jg-intro-word]*Then* some result icon:check-square[role=green]
+
+// end::scenario-pending[]
+

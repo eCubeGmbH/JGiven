@@ -1,0 +1,38 @@
+=== Tag Hierarchy Example
+
+icon:check-square[role=green] 2 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 2 Total (1ms)
+
+// tag::scenario-successful[]
+
+==== Parent tags can have values
+
+icon:check-square[role=green]
+
+Tags: _TagThatIsNotVisibleInNavigation_, _AnotherExampleSubCategory_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* tags annotated with tags that have values
+
+* [.jg-intro-word]*When* the report is generated
+
+* [.jg-intro-word]*Then* the tags appear in a hierarchy
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Tags can form a hierarchy
+
+icon:check-square[role=green]
+
+Tags: _ExampleSubCategory_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* tags annotated with tags
+
+* [.jg-intro-word]*When* the report is generated
+
+* [.jg-intro-word]*Then* the tags appear in a hierarchy
+
+// end::scenario-successful[]
+

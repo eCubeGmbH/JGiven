@@ -1,0 +1,65 @@
+=== Current Step Example
+
+icon:check-square[role=green] 3 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 3 Total (2ms)
+
++++Demonstrates the use of the CurrentStep interface+++
+
+// tag::scenario-successful[]
+
+==== SetName can also use arguments
+
+icon:check-square[role=green]
+
+Tags: _CurrentStep_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* step one argument
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== SetName with arguments also works with parameterized tests
+
+icon:check-square[role=green]
+
++++This test shows that setName also works with parametrized tests. Note, however, that data tables cannot be created in this case. Use the @As annotation instead.+++
+
+Tags: _CurrentStep_
+
+===== Case 1
+
+====
+argument = argument 1
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* step argument 1
+
+===== Case 2
+
+====
+argument = argument 2
+====
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* step argument 2
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Step name can be changed with CurrentStep
+
+icon:check-square[role=green]
+
++++This test shows how to use the CurrentStep interface to change the name of a step+++
+
+Tags: _CurrentStep_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* this step name is set with the CurrentStep interface +
+  _+++This step changes its name programmatically using the setStep method. The name is actually step_name_changed_with_CurrentStep+++_
+
+// end::scenario-successful[]
+

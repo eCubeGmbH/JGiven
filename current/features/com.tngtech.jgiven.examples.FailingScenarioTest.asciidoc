@@ -1,0 +1,81 @@
+=== Failing Scenario
+
+icon:check-square[role=green] 0 Successful, icon:exclamation-circle[role=red] 1 Failed, icon:ban[role=silver] 0 Pending, 1 Total (174ms)
+
+// tag::scenario-failed[]
+
+==== A scenario with a multi line error message
+
+icon:exclamation-circle[role=red] (174ms)
+
+Tags: _FailingOnPurpose_
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* multi line error message icon:exclamation-circle[role=red] (142ms)
+
+.org.opentest4j.AssertionFailedError: [This
+[.jg-exception%collapsible]
+====
+message
+has
+multiple lines] 
+Expecting value to be false but was true
+
+....
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+com.tngtech.jgiven.examples.FailingScenarioTest$Steps.multi_line_error_message(FailingScenarioTest.java:23)
+com.tngtech.jgiven.examples.FailingScenarioTest$Steps$ByteBuddy$Vk7bHq4u.multi_line_error_message$accessor$aw89Qi3R(Unknown Source)
+com.tngtech.jgiven.examples.FailingScenarioTest$Steps$ByteBuddy$Vk7bHq4u$auxiliary$fjq2kY9Q.call(Unknown Source)
+com.tngtech.jgiven.examples.FailingScenarioTest$Steps$ByteBuddy$Vk7bHq4u.multi_line_error_message(Unknown Source)
+com.tngtech.jgiven.examples.FailingScenarioTest.a_scenario_with_a_multi_line_error_message(FailingScenarioTest.java:18)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+org.junit.rules.RunRules.evaluate(RunRules.java:20)
+org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+....
+====
+
+
+// end::scenario-failed[]
+

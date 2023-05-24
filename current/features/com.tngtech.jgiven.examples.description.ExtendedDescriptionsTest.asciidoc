@@ -1,0 +1,74 @@
+=== Extended Descriptions
+
+icon:check-square[role=green] 5 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 5 Total (1ms)
+
++++Example for different possibilities to annotate test cases with extended descriptions+++
+
+// tag::scenario-successful[]
+
+==== Scenarios with multiple argument parameters can be shown via click on table
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some bool [.jg-argument]*<bool>* and int [.jg-argument]*<i>* value +
+  _+++Different number of arguments can be referenced in different order - int : $2, bool : $1+++_
+
+.Cases
+[.jg-casesTable%header,cols="h,1,1,>1"]
+|===
+| # | bool | i | Status
+| 1 | false | 0 | SUCCESS
+| 2 | true | 1 | SUCCESS
+|===
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Steps can have extended descriptions
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some boolean value [.jg-argument]_true_ +
+  _+++This is a boolean value+++_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Steps can have extended descriptions with arguments
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some int value [.jg-argument]_1_ +
+  _+++We can reference the first argument with $$ or $$1 : $+++_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Steps can have multiple arguments referenced in extended descriptions
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* some bool [.jg-argument]_false_ and int [.jg-argument]_0_ value +
+  _+++Different number of arguments can be referenced in different order - int : $2, bool : $1+++_
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Steps can reference arguments by name in extended descriptions
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* another bool [.jg-argument]_false_ and int [.jg-argument]_0_ value +
+  _+++Referencing arguments per name - int : $i, bool : $bool+++_
+
+// end::scenario-successful[]
+

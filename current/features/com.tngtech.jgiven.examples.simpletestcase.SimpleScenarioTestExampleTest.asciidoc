@@ -1,0 +1,55 @@
+=== Simple Scenario Test Example
+
+icon:check-square[role=green] 3 Successful, icon:exclamation-circle[role=red] 0 Failed, icon:ban[role=silver] 0 Pending, 3 Total (2ms)
+
+// tag::scenario-successful[]
+
+==== Coffee should be served
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine with [.jg-argument]_100_ coffees
+
+* [.jg-intro-word]*When* enough money is deposited
+
+* [.jg-intro-word]*And* the coffee button is pressed
+
+* [.jg-intro-word]*Then* a cup of coffee is served
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Coffee should not be served if not enough money is deposited
+
+icon:check-square[role=green]
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine
+
+* [.jg-intro-word]*When* [.jg-argument]_1_ euros are deposited
+
+* [.jg-intro-word]*And* the coffee button is pressed
+
+* [.jg-intro-word]*Then* no cup of coffee is served
+
+// end::scenario-successful[]
+
+// tag::scenario-successful[]
+
+==== Coffee should not be served if there are no coffees left
+
+icon:check-square[role=green] (1ms)
+
+[unstyled.jg-step-list]
+* [.jg-intro-word]*Given* a coffee machine with [.jg-argument]_0_ coffees
+
+* [.jg-intro-word]*When* enough money is deposited
+
+* [.jg-intro-word]*And* the coffee button is pressed
+
+* [.jg-intro-word]*Then* no cup of coffee is served
+
+// end::scenario-successful[]
+
