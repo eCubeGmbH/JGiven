@@ -34,7 +34,7 @@ icon:check-square[role=green] (0s 58ms)
 * [.introWord]*Then* it can be added as an attachment to the step with title [.stepArgument]*<title>*  link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment2.plain[icon:file[],title=English], link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment3.plain[icon:file[],title=German], link:attachments/com/tngtech/jgiven/examples/attachments/AttachmentsExample/attachment4.plain[icon:file[],title=Chinese]
 
 .Cases
-[options="header"]
+[options="header",cols="1h,3,3,>1"]
 |===
 | #  | content | title | Status
 | 1 | pass:["Hello World"] | pass:[English] | icon:check-square[role=green]

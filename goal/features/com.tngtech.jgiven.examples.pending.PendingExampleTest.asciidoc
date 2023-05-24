@@ -19,7 +19,7 @@ Tags: _Pending Annotation_
 * [.introWord]*Then* some result [.right]#icon:ban[role=grey] (0s 0ms)#
 
 .Cases
-[options="header"]
+[options="header",cols="1h,3,>1"]
 |===
 | #  | actionCount | Status
 | 1 | pass:[1st] | icon:ban[role=grey]
